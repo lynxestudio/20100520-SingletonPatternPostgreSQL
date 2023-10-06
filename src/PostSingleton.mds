@@ -1,0 +1,16 @@
+<Combine fileversion="2.0">
+  <Configurations active="Debug">
+    <Configuration name="Debug" ctype="CombineConfiguration">
+      <Entry build="True" name="PostSingleton" configuration="Debug" />
+    </Configuration>
+    <Configuration name="Release" ctype="CombineConfiguration">
+      <Entry build="True" name="PostSingleton" configuration="Release" />
+    </Configuration>
+  </Configurations>
+  <StartMode startupentry="PostSingleton" single="True">
+    <Execute type="None" entry="PostSingleton" />
+  </StartMode>
+  <Entries>
+    <Entry filename="PostSingleton.mdp" />
+  </Entries>
+</Combine>
