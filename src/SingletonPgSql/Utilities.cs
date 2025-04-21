@@ -11,9 +11,27 @@ internal static class Utilities
 			Console.WriteLine();
         }
         
-        internal static void ShowMenu(string title)
+        internal static void ShowTitle(string title)
         {
             ShowMenu(title, null);
+        }
+        
+        internal static void ShowGrid(string[] collection)
+        {
+            int width = Console.WindowWidth - 4;
+            int i = 0;
+            Console.WriteLine("+" + new string('-', width - 2) + "+");
+            Console.WriteLine("|" + new string(' ', width - 2) + "|");
+            if (collection != null)
+            {
+                foreach (var item in collection)
+                {
+                    i++;
+                    Console.WriteLine("| " + AlignLeftText(i + ")  " + item, width - 3) + "|");
+                }
+            }
+            Console.WriteLine("|" + new string(' ', width - 2) + "|");
+            Console.WriteLine("+" + new string('-', width - 2) + "+");
         }
 
         internal static void ShowMenu(String title, string[] collection)
